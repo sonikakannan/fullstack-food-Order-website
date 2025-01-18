@@ -14,5 +14,5 @@ export const assets ={
     parcel_icon
 }
 
-export const url =  import.meta.env.MODE=="devlopment"? https://fullstack-food-delivary-backend.onrender.com/":'/'
+export const url =  import.meta.env.MODE=="devlopment"? "https://fullstack-food-delivary-backend.onrender.com":'/'
 
