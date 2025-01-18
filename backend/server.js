@@ -15,7 +15,14 @@ const __dirname= path.resolve()
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: [
+        "https://fullstack-food-delivary-admin.onrender.com", // Allow Admin Origin
+        "https://fullstack-food-delivary-frontend.onrender.com" // Allow Frontend Origin (if needed)
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
+    credentials: true // Allow cookies if required
+}))
 
 if(process.env.NODE_ENV==="production"){
 // Serve frontend static files
